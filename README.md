@@ -7,3 +7,6 @@ To Start the application:
 2. Start the client with npm run serve command line
 
 3. Start the server with npm start
+
+The Data in the project is managed with mySql.
+The Client created by vue.js.
