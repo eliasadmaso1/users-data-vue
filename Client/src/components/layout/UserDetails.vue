@@ -7,7 +7,9 @@
 
 </form>
     <div class="user-details">
-        <img v-if="user.male" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/1200px-Breezeicons-actions-22-im-user.svg.png" alt="user" class="user-image">
+                
+        <img v-if="user.img.length > 1" :src="user.img" alt="user" class="user-image">
+        <img v-else-if="user.male" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Breezeicons-actions-22-im-user.svg/1200px-Breezeicons-actions-22-im-user.svg.png" alt="user" class="user-image">
         <img v-else src="http://cdn.onlinewebfonts.com/svg/img_508631.png" alt="user" class="user-image">
 
         <span class="detail">{{user.userName}}</span>
@@ -68,7 +70,6 @@ export default {
             this.user.email="email",
             this.user.phoneNumber="phone number",
             this.user.adress="adress",
-            this.user.img="",
             this.user.male = true
             
 
@@ -155,7 +156,7 @@ export default {
 }
 
 .user-image{
-    width:50px;
+    width:80px;
     border: solid 1px black;
     border-radius: 50%;
     object-fit: cover;
